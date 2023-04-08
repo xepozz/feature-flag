@@ -2,7 +2,7 @@ on:
   pull_request:
   push:
 
-name: "PHPUnit"
+name: "Psalm"
 
 jobs:
   phpunit:
@@ -28,5 +28,5 @@ jobs:
       - name: Install dependencies
         run: composer install
 
-      - name: Run composer unused
-        run: vendor/bin/phpunit
+      - name: Run psalm.
+        run: vendor/bin/psalm --shepherd --stats --output-format=github --php-version=${{ matrix.php }}
