@@ -1,6 +1,19 @@
 {
   "name": "xepozz/feature-flag",
   "description": "Feature-flag management system for Yii 3",
+  "keywords": [
+    "yii",
+    "yii3",
+    "yii-package",
+    "yii-module",
+    "yii-extension",
+    "yii-feature-flag",
+    "yii-feature",
+    "yii-flag",
+    "feature-flag",
+    "feature",
+    "flag"
+  ],
   "minimum-stability": "dev",
   "require": {
     "php": "^8.1",

@@ -15,4 +15,13 @@ composer require xepozz/feature-flag
 ```
 
 
+## Looking for more modules?
+
+- [Unique ID](https://github.com/xepozz/unique-id) - Allows you to track the unique user in the application.
+- [Request ID](https://github.com/xepozz/request-id) - A simple library to generate both unique request and response IDs for tracing purposes.
+- [AB](https://github.com/xepozz/ab) - A simple library to enable A/B testing based on a set of rules.
+- [Shortcut](https://github.com/xepozz/shortcut) - Sets of helper functions for rapid development of Yii 3 applications.
+
+ 
+
 
