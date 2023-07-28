@@ -9,6 +9,9 @@ use Xepozz\FeatureFlag\Experiment\ExperimentStorageInterface;
 use Xepozz\FeatureFlag\FlagStorageInterface;
 
 return [
+    'xepozz/feature-flag' => [
+        'flags' => [],
+    ],
     'yiisoft/yii-debug' => [
         'collectors' => [
             FeatureFlagCollector::class,

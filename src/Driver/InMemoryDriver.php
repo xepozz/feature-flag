@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Xepozz\FeatureFlag;
+namespace Xepozz\FeatureFlag\Driver;
 
 use BackedEnum;
 use InvalidArgumentException;
+use Xepozz\FeatureFlag\FlagStorageInterface;
 
-final class InMemoryFlagStorage implements FlagStorageInterface
+final class InMemoryDriver implements FlagStorageInterface
 {
     public function __construct(private array $flags = [])
     {

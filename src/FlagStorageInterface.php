@@ -13,7 +13,7 @@ interface FlagStorageInterface
     public function setFlag(string|int|BackedEnum $flag, bool $active): void;
 
     /**
-     * @return (string|int|BackedEnum)[]
+     * @return array<string, bool>
      */
     public function getAll(): array;
 }

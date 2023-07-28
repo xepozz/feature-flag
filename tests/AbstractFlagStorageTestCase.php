@@ -6,15 +6,17 @@ namespace Xepozz\FeatureFlag\Tests;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Xepozz\FeatureFlag\InMemoryFlagStorage;
+use Xepozz\FeatureFlag\FlagStorageInterface;
 use Xepozz\FeatureFlag\Tests\Support\StringEnum;
 
-class FlagTest extends TestCase
+abstract class AbstractFlagStorageTestCase extends TestCase
 {
+    abstract protected function createDriver(array $flags): FlagStorageInterface;
+
     #[DataProvider('dataIsActive')]
-    public function testInGroup(array $flags, string|int|\BackedEnum $flag, bool $expectedResult): void
+    public function testIsActive(array $flags, string|int|\BackedEnum $flag, bool $expectedResult): void
     {
-        $storage = new InMemoryFlagStorage($flags);
+        $storage = $this->createDriver($flags);
 
         $actualResult = $storage->isActive($flag);
         $this->assertEquals($expectedResult, $actualResult);

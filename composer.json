@@ -24,6 +24,10 @@
     "vimeo/psalm": "^5.8",
     "yiisoft/yii-debug": "dev-split-debug"
   },
+  "suggest": {
+    "ext-redis": "Using Redis as a storage for feature flags",
+    "yiisoft/yii-debug": "Debugging of feature flags"
+  },
   "scripts": {
     "test": "phpunit",
     "psalm": "psalm"
